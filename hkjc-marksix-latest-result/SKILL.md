@@ -14,7 +14,7 @@ Extract the latest draw from the **上期攪珠** section:
 - 攪珠結果（6個正選號碼）
 - 特別號碼（`+` 後的號碼）
 
-Then read bet lines from `assets/bets.md` and evaluate each line against the draw result.
+Then read bet lines from `<skill_dir>/assets/bets.md` and evaluate each line against the draw result.
 
 ## Workflow
 
@@ -26,7 +26,7 @@ Then read bet lines from `assets/bets.md` and evaluate each line against the dra
    - `攪珠日期` (example: `07/03/2026 (星期六)`)
    - `攪珠結果 :` and the seven balls shown
 5. Treat the first six numbers as regular numbers and the last number after `+` as special number.
-6. Read `assets/bets.md`.
+6. If `<skill_dir>/assets/bets.md` does not exist, create an empty file. Then read `<skill_dir>/assets/bets.md`.
 7. Parse each non-empty line as one bet:
    - Accept separators: `,` `，` spaces.
    - Convert to integers and keep unique numbers only.
@@ -44,6 +44,7 @@ Then read bet lines from `assets/bets.md` and evaluate each line against the dra
    - 七獎: `regular_hits = 3`
    - Otherwise: 未中獎
 10. Reply in Traditional Chinese unless user asked otherwise.
+11. Close browser profile if it was started by this workflow.
 
 ## Output Template
 
