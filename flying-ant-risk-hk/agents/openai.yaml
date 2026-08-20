@@ -1,0 +1,3 @@
+display_name: HK Flying Ant Risk
+short_description: Estimates Hong Kong flying termite swarm risk from live HKO weather data.
+default_prompt: Check the current Hong Kong flying ant risk and explain the score briefly.
